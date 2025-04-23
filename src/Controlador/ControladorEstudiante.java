@@ -8,6 +8,11 @@ public class ControladorEstudiante {
     
     private Estudiante modelo;
     private VistaEstudiante Vista;
+
+    public ControladorEstudiante(Estudiante modelo, VistaEstudiante Vista) {
+        this.modelo = modelo;
+        this.Vista = Vista;
+    }
     
     
     public void setNombreEstudiante(String nombre) {
@@ -27,6 +32,6 @@ public class ControladorEstudiante {
     }
 
     public void actualizarVista() {
-
+     Vista.mostrarDetalleEstudiante(modelo.getNombre(), modelo.getEdad());
     }
 }
